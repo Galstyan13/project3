@@ -1,5 +1,3 @@
-import random
-
 templates = [
     "It was about {} {} ago when I arrived at the hospital in a {}. The hospital is a/an {} place, there are a lot of "  "{} {}s/es here. "
     "There are nurses here who have {} {}. If someone wants to come into my room I told them that they have to {} "
@@ -18,12 +16,6 @@ prompts = [
     ["Number", "Measure of time", "Mode of Transportation", "Adjective", "Adjective2", "Noun", "Color", "Part of the Body", "Verb", "Number2", "Noun2", "Noun3", "Part of the Body 2", "Verb", "Noun4", "Adjective3", "Silly Word", "Noun"],
     ["Proper Noun (Person’s Name)", "Noun", "Adjective (Feeling)", "Verb", "Adjective (Feeling) 2", "Animal", "Verb2", "Color", "Verb (ending in ing)", "Adverb (ending in ly)", "Number", "Measure of Time", "Color", "Animal","Number", "Silly Word", "Noun2"],
     ["Proper Noun (Person’s Name)", "Adjective", "Color", "Animal", "Place", "Adjective2", "Magical Creature (Plural)", "Adjective3", "Magical Creature (Plural)2", "Room in a House", "Noun", "Noun2", "Noun (Plural)", "Adjective4",  "Noun (Plural)", "Number", "Measure of time", "Verb (ending in ing)", "Adjective5", "Noun5"]
-]
-
-events = [
-    "Suddenly, a loud noise echoed through the area!",
-    "Out of nowhere, a mysterious figure appeared in the distance.",
-    "A sudden storm began, changing the atmosphere completely."
 ]
 
 print("THis game will tell you a story!"
@@ -50,8 +42,7 @@ def generate_story(template, inputs):
 
 
 user_inputs = get_user_input(selected_prompts)
-random_event = random.choice(events)
-story = generate_story(selected_template, user_inputs) + f" {random_event}"
+story = generate_story(selected_template, user_inputs) 
 
 print("\Here is Your story ! \n Enjoy")
 print(story)
